@@ -8,7 +8,7 @@
 4. GLHF
 
 ## How to build
-1. Clone the repository
+1. Clone the repository or download the source code From code button on the top right -> download zip.
 2. install rust from [here](https://www.rust-lang.org/tools/install) or just run the following command (for macOS and linux):
 ```bash
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
