@@ -2,7 +2,7 @@ use std::cmp::min;
 use std::fs::{File, OpenOptions};
 use std::io::{Read, Write};
 use std::sync::{Arc, Mutex, RwLock};
-use std::sync::mpsc::{Receiver, RecvError, Sender};
+use std::sync::mpsc::{Receiver, Sender};
 use crate::encdec::Opcode;
 use std::env;
 
