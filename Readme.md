@@ -14,7 +14,7 @@
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 3. cargo build --release
-4. The binary will be in the target/release/Tftpclinet directory
+4. The binary will be in the target/release/Tftpclinet
 5. GLHF
 
 ## VSCode devcontainer to compile
