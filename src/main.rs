@@ -258,11 +258,13 @@ fn handle_command(command: &str, args: &String, state: &Arc<State>, tx: &Sender<
                     {connection_handler.lock().unwrap().send(bytes)};
                     {*state.await_ack.write().unwrap() = 0};
                     let mut block_num = 0;
+                    // reverse the queue
+                    let mut writing_queue: std::collections::VecDeque<Vec<u8>> = writing_queue.into_iter().collect();
                     while !writing_queue.is_empty() {
                         match rx.recv() {
                             Ok(i) => {
                                 if i == block_num {
-                                    let bytes = writing_queue.pop().unwrap();
+                                    let bytes = writing_queue.pop_front().unwrap();
                                     block_num += 1;
                                     {*state.await_ack.write().unwrap() = block_num as u16 };
                                     {connection_handler.lock().unwrap().send(bytes)};
