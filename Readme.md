@@ -1,5 +1,5 @@
 ## How to use
-1. Download form release here: [Download](https://github.com/bguspl/TFTP-rust-client/releases/tag/TFTP-client) for your os.
+1. Download form release here: [Download](https://github.com/bguspl/TFTP-rust-client/releases) for your os.
 2. Run the program with the following command in the binary directory:
 ```bash
 ./Tftpclient <server-ip> <port> # the name is different in each release so look for the binary name
